@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quickcab-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: quickcab
+
+  template:
+    metadata:
+      labels:
+        app: quickcab
+
+    spec:
+      containers:
+        - name: quickcab
+          image: YOUR_DOCKERHUB_USERNAME/quickcab-devops:latest
+          ports:
+            - containerPort: 5000
