@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: quickcab
-          image: YOUR_DOCKERHUB_USERNAME/quickcab-devops:latest
+         image: shraddhagadhave/quickcab-devops:latest
           ports:
             - containerPort: 5000
